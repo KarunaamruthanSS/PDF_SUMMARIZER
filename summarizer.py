@@ -1,9 +1,9 @@
-from model_loader import load_llm_pipeline
+from model_loader import load_summarizer_pipeline
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def generate_summary(text):
     # Load model
-    pipe = load_llm_pipeline()
+    pipe = load_summarizer_pipeline()
     
     # Text splitter for map-reduce
     text_splitter = RecursiveCharacterTextSplitter(
@@ -19,11 +19,9 @@ def generate_summary(text):
     # Map step: Summarize each chunk
     for doc in docs:
         input_text = doc.page_content
-        prompt = f"Summarize the following text briefly:\n\n{input_text}\n\nSummary:"
         
-        # distilgpt2 context window is small, so we use truncation to avoid errors
-        result = pipe(prompt, max_new_tokens=100, temperature=0.7, do_sample=True, truncation=True)
-        summary = result[0]['generated_text'].replace(prompt, "").strip()
+        result = pipe(input_text, max_new_tokens=100, min_new_tokens=30, do_sample=False, truncation=True)
+        summary = result[0]['summary_text'].strip()
         summaries.append(summary)
         
     # Reduce step: If there's more than one summary, summarize them together
@@ -35,9 +33,8 @@ def generate_summary(text):
         
         final_summaries = []
         for doc in final_docs:
-            prompt = f"Provide a comprehensive final summary of the following text:\n\n{doc.page_content}\n\nFinal Summary:"
-            result = pipe(prompt, max_new_tokens=150, temperature=0.7, do_sample=True, truncation=True)
-            summary = result[0]['generated_text'].replace(prompt, "").strip()
+            result = pipe(doc.page_content, max_new_tokens=150, min_new_tokens=40, do_sample=False, truncation=True)
+            summary = result[0]['summary_text'].strip()
             final_summaries.append(summary)
             
         return " ".join(final_summaries)

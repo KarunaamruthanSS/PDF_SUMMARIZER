@@ -1,19 +1,31 @@
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
+from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 import torch
 import streamlit as st
 
 @st.cache_resource
-def load_llm_pipeline():
-    model_id = "distilgpt2"
+def load_summarizer_pipeline():
+    model_id = "Falconsai/text_summarization"
     tokenizer = AutoTokenizer.from_pretrained(model_id)
-    model = AutoModelForCausalLM.from_pretrained(model_id)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
     
-    # Create pipeline
     pipe = pipeline(
-        "text-generation",
+        "summarization",
         model=model,
         tokenizer=tokenizer,
-        device="cpu" # Force CPU
+        device="cpu"
     )
+    return pipe
+
+@st.cache_resource
+def load_qa_pipeline():
+    model_id = "google/flan-t5-small"
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
     
+    pipe = pipeline(
+        "text2text-generation",
+        model=model,
+        tokenizer=tokenizer,
+        device="cpu"
+    )
     return pipe

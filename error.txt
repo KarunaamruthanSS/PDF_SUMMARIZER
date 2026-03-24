@@ -1,0 +1,135 @@
+(venv) PS C:\Users\91915\Documents\Documents\Semester 6\PDF_Summarizer> streamlit run app.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.116.73.178:8501
+
+modules.json: 100%|█████████████████████████████| 349/349 [00:00<00:00, 99.0kB/s]
+C:\Users\91915\Documents\Documents\Semester 6\PDF_Summarizer\venv\Lib\site-packages\huggingface_hub\file_download.py:129: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\91915\.cache\huggingface\hub\models--sentence-transformers--all-MiniLM-L6-v2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.       
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config_sentence_transformers.json: 100%|████████| 116/116 [00:00<00:00, 57.4kB/s]
+README.md: 10.5kB [00:00, 520kB/s]
+sentence_bert_config.json: 100%|██████████████| 53.0/53.0 [00:00<00:00, 26.3kB/s]
+config.json: 100%|██████████████████████████████████████| 612/612 [00:00<?, ?B/s]
+model.safetensors: 100%|████████████████████| 90.9M/90.9M [00:39<00:00, 2.31MB/s]
+Loading weights: 100%|███████████████████████| 103/103 [00:00<00:00, 1171.03it/s]
+BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  |
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  |
+
+Notes:
+- UNEXPECTED    :can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+tokenizer_config.json: 100%|████████████████████████████| 350/350 [00:00<?, ?B/s]
+vocab.txt: 232kB [00:00, 1.42MB/s]
+tokenizer.json: 466kB [00:00, 829kB/s]
+special_tokens_map.json: 100%|██████████████████████████| 112/112 [00:00<?, ?B/s]
+config.json: 100%|██████████████████████████████████████| 190/190 [00:00<?, ?B/s]
+Loading weights: 100%|█████████████████████████| 76/76 [00:00<00:00, 1582.88it/s]
+Passing `generation_config` together with generation-related arguments=({'temperature', 'max_new_tokens', 'do_sample'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=100) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=150) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=150) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=150) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generatioBoth `max_new_tokens` (=150) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more informatBoth `max_new_tokens` (=150) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Both `max_new_tokens` (=150) and `max_length`(=50) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  Stopping...
+(venv) PS C:\Users\91915\Documents\Documents\Semester 6\PDF_Summarizer>
+
+streamlit:
+Prohibitions
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* a) The pricing
+* I think that this is important because it allows us more to understand the concept of the  in-person-to-the-person system.
+I think that this is important because it allows us more to understand the concept of the  in-person-to-the-person system.
+I think that this is important because it allows us more to understand the concept of the  in-person-to-the-person system.
+I think that this is important because it allows us more to understand the concept of the  in-person-to-the-person system.
+I think that this is important because it allows us more to understand the concept of the  in-person-to- This is a huge and complex toolkit for  developers. It is a powerful toolkit to develop and share ideas and ideas to  developers.      
+I think that this is a big and complex toolkit for  developers.        
+The biggest example of  developers using  applications is The  applications.
+The  applications.
+I used  applications.    
+I got  applications.       
+I use  applications.       
+I We are a small company and we are not a big company.       
+We are a small company and we are not a big company.          
+We have more than one customer and we are not a big company.               
+We did our homework first, so we don't have to deal with the problem. The   
+competition
+is 
+very 
+useful.
+The  
+is 
+very 
+useful.
+The  
+competition
+is 
+very 
+useful.
+The  
+competition
+is 
+very 
+useful.
+The
