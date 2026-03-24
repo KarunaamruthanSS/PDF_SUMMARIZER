@@ -4,7 +4,7 @@ import streamlit as st
 
 @st.cache_resource
 def load_summarizer_pipeline():
-    model_id = "Falconsai/text_summarization"
+    model_id = "sshleifer/distilbart-cnn-12-6"
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
     
@@ -18,7 +18,7 @@ def load_summarizer_pipeline():
 
 @st.cache_resource
 def load_qa_pipeline():
-    model_id = "google/flan-t5-small"
+    model_id = "google/flan-t5-base"
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
     
