@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  python-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Python compile check
+        run: python -m py_compile app.py summarizer.py rag_pipeline.py qa_system.py model_loader.py
+      - name: Python smoke test
+        run: python tests/python_smoke.py
+
+  node-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install Node dependencies
+        run: npm ci
+      - name: TypeScript lint
+        run: npm run lint
+      - name: TypeScript API smoke test
+        run: npm run smoke:ts

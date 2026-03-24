@@ -6,5 +6,18 @@ coverage/
 *.log
 .env*
 !.env.example
-__pycache/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
 venv/
+.pytest_cache/
+.mypy_cache/
+
+# Runtime artifacts
+temp.pdf
+uploads/
