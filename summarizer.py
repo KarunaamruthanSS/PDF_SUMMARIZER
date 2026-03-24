@@ -1,5 +1,5 @@
 from model_loader import load_llm_pipeline
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def generate_summary(text):
     # Load model
